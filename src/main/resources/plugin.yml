@@ -1,0 +1,22 @@
+name: IRKit
+version: '${version}'
+main: dev.exiledddev.irkit.IRKitPlugin
+api-version: '1.21.11'
+description: Kits with an in-game editor, plus random gear and power suits, with full vanilla selector support.
+author: exiledddev
+website: https://github.com/exiledddev/irkit
+
+# Commands are registered through Paper's Brigadier API, so there is no commands: section.
+permissions:
+  irkit.kits:
+    description: Open /kits and take or preview kits for yourself.
+    default: op
+  irkit.give:
+    description: Give kits and gear to other players (/kit give, /randarmor, /randitem, /powersuit).
+    default: op
+  irkit.manage:
+    description: Create, edit, copy, rename and delete kits, and reload the config.
+    default: op
+  irkit.kit.*:
+    description: Take every kit from /kits when per-kit-permissions is on. Use irkit.kit.<name> for single kits.
+    default: op

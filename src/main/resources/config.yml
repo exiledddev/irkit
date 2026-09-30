@@ -1,0 +1,18 @@
+# IRKit configuration. Run /irkit reload after editing this file.
+
+kits:
+  # What /kit give does to what players are already carrying, unless --add or --replace is given:
+  #   replace - clear their inventory, armor and offhand first, then put every item in the exact
+  #             slot it has in the kit
+  #   add     - keep their items and add the kit on top; kit armor is equipped and their old
+  #             armor moves into their inventory (or drops at their feet if it's full)
+  default-give-mode: replace
+  # Mode used when a player takes a kit for themselves from /kits or with /kit claim.
+  claim-give-mode: replace
+  # When true, /kits only shows the kits a player has irkit.kit.<name> for (or irkit.kit.*).
+  per-kit-permissions: false
+
+gear:
+  # /randarmor and /powersuit replace armor (and /powersuit the offhand). true drops the old
+  # pieces at the player's feet like the old IsMP plugin did; false deletes them.
+  drop-replaced-gear: true
